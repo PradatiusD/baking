@@ -1,12 +1,14 @@
 <?php // echo '<pre>'; print_r($this->html); echo '</pre>' ?>
 
 <h1>Users</h1>
+<p><?php echo $this->Html->link('Add User', array('action' => 'add')); ?></p>
 <table>
 <tr>
 	<th>Id</th>
 	<th>First Name</th>
 	<th>Last Name</th>
 	<th>Get Number</th>
+	<th>Options</th>
 </tr>
 
 <?php foreach ($users as $user): ?>
@@ -22,7 +24,22 @@
             	'controller'=>'phone_numbers'
             )
         );
- ?></td>
+ 		?>
+ 	</td>
+ 	<td>
+		<?php
+			echo $this->Html->link(
+				'Edit', array('action' => 'edit', $user['User']['id'])
+			);
+		?>
+ 		<?php
+			echo $this->Form->postLink(
+			'Delete',
+			array('action' => 'delete', $user['User']['id']),
+			array('confirm' => 'Are you sure?')
+                );
+		?>
+ 	</td>
 </tr>
 <?php endforeach; ?>
 <?php unset($users); ?>

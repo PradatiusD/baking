@@ -5,6 +5,7 @@ CREATE TABLE users (
 );
 
 CREATE TABLE phone_numbers (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     user_id INT(10) NOT NULL,
     phone VARCHAR(50)
 );
