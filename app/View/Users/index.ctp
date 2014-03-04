@@ -1,14 +1,10 @@
-<!-- File: /app/View/Posts/index.ctp -->
-
 <h1>Users</h1>
 <table>
 <tr>
 	<th>Id</th>
 	<th>First Name</th>
-	<th>Last Nmae</th>
+	<th>Last Name</th>
 </tr>
-
-<!-- Here is where we loop through our $posts array, printing out post info -->
 
 <?php foreach ($users as $user): ?>
 <tr>

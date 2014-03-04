@@ -1,9 +1,8 @@
-
 <h1>Phone Numbers</h1>
 <table>
 <tr>
 	<th>User Id</th>
-	<th>First Name</th>
+	<th>Phone Number</th>
 </tr>
 
 <?php foreach ($phone_numbers as $phone): ?>
