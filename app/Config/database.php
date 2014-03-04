@@ -83,4 +83,11 @@ class DATABASE_CONFIG {
 		'prefix' => '',
 		//'encoding' => 'utf8',
 	);
+
+	public $mongo = array(
+		'datasource' => 'Mongodb.MongoDbSource',
+		'database' => 'baking',
+		'host' => 'localhost',
+		'port' => 27017
+	);
 }
