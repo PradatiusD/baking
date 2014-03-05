@@ -19,11 +19,10 @@
 				if ($this->User->saveAssociated($this->request->data)) {
 
 					$this->Session->setFlash(__('Your new user has been saved.'));
+
 					return $this->redirect(array('action' => 'index'));
 
 				}
-
-				print_r($this->request->data);
 
 				$this->Session->setFlash(__('Unable to add your user.'));
 
